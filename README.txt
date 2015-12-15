@@ -1,5 +1,14 @@
 This is the beginning of some documentation on how to handle these datasets in git.
 
+#Sorting files#
+When working on the files in excel, it might be useful to sort the entries in different ordering. However,
+before files are committed to git, you need to revert to a standard sort order to make sure that all the lines
+are identical to the ones in the repository. Otherwise, everything will show up as a change and everyone else 
+will have conflicts. Here are the sort orderings to apply to each dataset.
+
+orgs: id, year
+contracts: ID.org, clean.name, startyear, clean.address, desc
+
 #Format for saving files#
 The files are CSV (comma-separated values) files. This means they are text files, which is important
 because it simplifies both git's tracking of them and easy import into statistical software. 
