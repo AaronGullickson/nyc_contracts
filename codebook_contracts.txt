@@ -2,11 +2,11 @@ Codebook for dataset mergedcontracts
 
 mergedcontracts merges data from five different sources. The first two
 sources are competitively-bid contracts provided to non-profit
-organization from 1997-2001 from the city of New York and the state of
+organizations from 1997-2001 from the city of New York and the state of
 New York, respectively. The second two sources are the same type of
 contracts from the city and state of NY for the years 2002-2012. The
-final source is discretionary contracts from the city (??) of NY from
-????-????. Collectively, these different data sources are identifiable
+final source is discretionary contracts from the city of NY from
+2002-2012. Collectively, these different data sources are identifiable
 from the variables level (giving city or state), secondRound,
 competitive, and discretionary.  Because of the different sources, not
 all variables are available for every contract in the dataset. See
@@ -14,7 +14,7 @@ detailed variable descriptions for availability information.
 
 id
 --------------
-A unique id for each contract in the dataset. This was assigned during
+A unique id for each contract in the dataset. This was assigned by researchers during
 processing.
 
 level			
@@ -26,7 +26,7 @@ Indicator variable for whether the contract is from NY State or NY City
 
 secondRound 
 -------------- 
-True/false variable indicating whether the data come from in the
+True/false variable indicating whether the data come from the
 second round of data collection on competitive contracts (2002-2012).
  		
 competitive
@@ -37,7 +37,7 @@ in both the discretionary and competitive datasets.
 
 discretionary		
 --------------
-Boolean varaible indicating whether contract is from discretionary
+Boolean variable indicating whether contract is from discretionary
 funding dataset. Note that there are some contracts identified in both
 the discretionary and competitive datasets.
 		
@@ -52,11 +52,11 @@ address
 --------------
 Address of contract recipient in the original raw data. Generally this
 is not as useful as the clean.address variable which strips out
-punctation and standardizes abbrevations.
+punctation and standardizes abbreviations.
 
 clean.name
 --------------
-Name of contract recipeint after cleaning and standardization. All
+Name of contract recipient after cleaning and standardization. All
 punctuation is removed and common words such as "The" and "inc" are
 removed. This makes it much easier to look for the same organization,
 but the same organization still may appear under different cleaned
@@ -65,9 +65,8 @@ organizations.
 
 clean.address
 ---------------
-
 Address of contract recipient after cleaning and
-standardization. Punctuation was stripped out and all abbrevations for
+standardization. Punctuation was stripped out and all abbreviations for
 street types were replaced with full names (e.g. AVE becomes
 AVENUE). Along with zip code, this is the address that was used to
 geo-code the contract.
@@ -75,7 +74,7 @@ geo-code the contract.
 zip			
 ---------------
 Zip code of contract recipient from the original data. All contracts
-with non-NYC zip codes have been removed.
+with non-NYC zip codes have been removed from the dataset.
 
 
 ID.org			
@@ -83,7 +82,7 @@ ID.org
 A unique identifier for contract recipient. This variable is assigned
 by researchers during processing. Initial linking of contracts on
 first round of competitive data (1997-2001) was done by hand and the
-letter abbrevation refers to the name of the researcher making the
+letter abbreviation refers to the name of the researcher making the
 link. On the second round of competitive data and the discretionary
 data, the linkage was automated using record linkage software which
 looked for a high degree of matching on clean.name and
@@ -97,8 +96,7 @@ the decimal place identifies the multi-sited organization.
 
 EIN
 ---------------
-Employer Identification Number, issued by federal government. SAY MORE
-ABOUT THE SOURCE OF THIS DATA.
+Employer Identification Number, issued by federal government. EINs were not included in the original raw data, but were assigned by matching clean.name to entries in the Guidestar.org online database or a digital download of data from the National Center on Charitable Statistics (NCCS).  Both the Guidestar.org database and the NCCS database compile information from the IRS Form 990, and make it available for public use.
 
 desc
 ---------------
@@ -115,7 +113,7 @@ End date of contract (m/d/y), from the original raw data.
 regdate
 ---------------
 The date (m/d/y) that contract was registered with controller’s
-office. SAY MORE HERE?
+office. The controller is the chief fiscal officer, and is responsible for issuing contract payments through the NYC and NYS payment systems.  Payments cannot be issued until a contract is registered.  The reliability of this field is in question, as conversations with city and state officials indicate that sometimes the contract registration date is backdated, i.e., a regdate is assigned that is prior to the actual date of contract approval and first payment.  It is unclear why this practice occurs.
 
 fiscal.year		
 ---------------
@@ -157,21 +155,25 @@ The amount of the contract per year of its length, in unadjusted
 dollars. This variable is constructed by dividing origamt by
 contractlen.
 
+
 service.address		
 ---------------
 The address where service was provided, from the original raw
 data. This service address is only available in the second round of
 the competitive bid contract data. Note that in some cases, the
-service address and the address of the organization will be the same.
+service address and the address of the organization will be the same.  This is understood to be because the contract recipient has only one location, which is both the organizational address and the service location address.
+
 
 clean.service.address
 ---------------
 Service address from the service.address, cleaned and standardized as
 for clean.address above.
 
+
 service.zip
 ---------------
 Zip code where service was provided, from the original raw data. 
+
 
 corrected.address
 ---------------
@@ -180,43 +182,52 @@ clean.address. In some cases, this address may differ from
 clean.address because of corrections applied in the geocoding
 procedure.
 
+
 corrected.zip
 ---------------
 The organizational zip code returned from the geocoding procedure
 using zip. In some cases, this address may differ from zip because of
 corrections applied in the geocoding procedure.
 
+
 city			
 ---------------
 The listed city of the organization from the original raw data. 
+
 
 state	
 ---------------		
 The listed state of the organization from the original raw
 data. Non-NY responses have been removed from the dataset. 
 
+
 naaccrQualType
 ----------------
 Indicator for the type of technique used for the geocoding of the
 organizational address.
 
+
 Latitude
 ----------------
 The latitude of the geocoded organizational address. 
 
+
 Longitude
 ----------------
 The longitude of the geocoded organizational address. 	
+
 
 CensusBlock		
 ----------------
 The census block corresponding to the geocoded latitude and longitude
 of the organizational address.
 
+
 CensusBlockGroup	
 ----------------
 The census block group corresponding to the geocoded latitude and
 longitude of the organizational address.
+
 
 CensusTract
 ----------------
@@ -229,9 +240,10 @@ HealthArea
 The NYC health area corresponding to the geocoded latitude and
 longitude of the organizational address.
 
+
 BoroCode
 ----------------
-Numeric code for the boro corresponding to the geocoded latitude and
+Numeric code for the borough corresponding to the geocoded latitude and
 longitude of the organizational address.
 	  1=Manhattan
 	  2=Bronx
@@ -239,20 +251,24 @@ longitude of the organizational address.
 	  4=Queens
 	  5=Staten Island
 
+
 BoroName
 ----------------
-The name of the boro corresponding to the geocoded latitude and
+The name of the borough corresponding to the geocoded latitude and
 longitude of the organizational address.
+
 
 CityCouncil
 ----------------
 The NY city council district corresponding to the geocoded latitude
 and longitude of the organizational address.
 
+
 StateSenate
 ----------------
 The NY state senate district corresponding to the geocoded latitude
 and longitude of the organizational address.
+
 
 CommDist
 ----------------
@@ -260,15 +276,48 @@ The NYC community district corresponding to the geocoded latitude and
 longitude of the organizational address. 1st digit indicates borough
 as per BoroCode.
 
+
 StateAssembly
 ----------------
 The NY state assembly district corresponding to the geocoded latitude
 and longitude of the organizational address.
 
+
 PolicePrecinct
 ----------------
 The NYC police precinct corresponding to the geocoded latitude
 and longitude of the organizational address.
+
+
+scode
+_______________
+Text code indicating which one of 25 different service types the contract is for.  Hand coded by researchers based on visual inspection of desc variable.  Document with fuller code descriptions and sample contract descriptions is available as a separate document entitled “S-codes and rules.”
+	ADV=advocacy
+	CD=community development
+	CR=crime
+	CULTO=cultural, including environmental
+	DC=day care
+	DIS=disabilities
+	EDUC= education and training (for adults; not K-12 education)
+	ELD=elderly
+	EMPM=employment for mentally ill people
+	EMPL=literacy and pre-employment skill training (for adults)
+	EMPO=other employment
+	FSF=foster care
+	FSP=family preventive services
+	GEN=general multi-service
+	GOS=general operating support
+	HLA=AIDS-related health
+	HLM=mental health
+	HLS=substance abuse
+	HLO=other health
+	HOUS=housing
+	IMM=immigration
+	MI=member items
+	NRENT=rent or physical plant costs
+	UND=undecided
+	YOUTH=children and youth
+	
 
 corrected.service.address
 ---------------
@@ -277,43 +326,52 @@ clean.service.address. In some cases, this address may differ from
 clean.service.address because of corrections applied in the geocoding
 procedure.
 
+
 corrected.service.zip
 ---------------
 The service zip code returned from the geocoding procedure using
 service.zip. In some cases, this address may differ from service.zip
 because of corrections applied in the geocoding procedure.
 
+
 city.service
 ---------------
 The listed city of the service from the original raw data. 
 
-state.servirce
+
+state.service
 ---------------		
 The listed state of the service from the original raw
-data. WE HAVE ONE DC ADDRESS HERE 
+data. WE HAVE ONE DC ADDRESS HERE **SHOULD WE GET RID OF IT?
+
 
 naaccrQualType.service
 ----------------
 Indicator for the type of technique used for the geocoding of the
 service address.
 
+
 Latitude.service
 ----------------
 The latitude of the geocoded service address. 
 
+
 Longitude.service
 ----------------
 The longitude of the geocoded service address. 	
+
 
 CensusBlock.service
 ----------------
 The census block corresponding to the geocoded latitude and longitude
 of the service address.
 
+
 CensusBlockGroup.service	
 ----------------
 The census block group corresponding to the geocoded latitude and
 longitude of the service address.
+
 
 CensusTract.service
 ----------------
@@ -326,9 +384,10 @@ HealthArea.service
 The NYC health area corresponding to the geocoded latitude and
 longitude of the service address.
 
+
 BoroCode.service
 ----------------
-Numeric code for the boro corresponding to the geocoded latitude and
+Numeric code for the borough corresponding to the geocoded latitude and
 longitude of the service address.
 	  1=Manhattan
 	  2=Bronx
@@ -336,20 +395,24 @@ longitude of the service address.
 	  4=Queens
 	  5=Staten Island
 
+
 BoroName.service
 ----------------
-The name of the boro corresponding to the geocoded latitude and
+The name of the borough corresponding to the geocoded latitude and
 longitude of the service address.
+
 
 CityCouncil.service
 ----------------
 The NY city council district corresponding to the geocoded latitude
 and longitude of the service address.
 
+
 StateSenate.service
 ----------------
 The NY state senate district corresponding to the geocoded latitude
 and longitude of the service address.
+
 
 CommDist.service
 ----------------
@@ -357,75 +420,91 @@ The NYC community district corresponding to the geocoded latitude and
 longitude of the service address. 1st digit indicates borough
 as per BoroCode.
 
+
 StateAssembly.service
 ----------------
 The NY state assembly district corresponding to the geocoded latitude
 and longitude of the service address.
+
 
 PolicePrecinct.service
 ----------------
 The NYC police precinct corresponding to the geocoded latitude
 and longitude of the service address.
 
+
 members.new
 ----------------
 [ask Erez]
+
 
 members.id
 ----------------
 [ask Erez]
 
+
 members.district
 ----------------
 [ask Erez]
+
 
 patronage
 ----------------
 [ask Erez]
 
+
 adjacent
 ----------------
 [ask Erez]
 
+
 contractno		
 ----------------
 The contract number provided in the original data. These contract
-numbers do NOT uniquely identify contracts.
+numbers do NOT uniquely identify contracts.  They contain only a portion of the full contract number, which would be a unique identifier.
+
 
 c.transcode
 ----------------
 NY City code for ??
 [need variable definitions]
 
+
 c.typecode
 ----------------		
 NY City code for type of contract
 [need variable definitions]
+
 
 c.awardcode
 ----------------
 NY City code for contract award category
 [need variable definitions]
 
+
 c.category
 ----------------
 NY City code for ??
 [need variable definitions]
+
 
 s.agency
 ----------------
 NY State agency that awarded contract
 [need variable definitions]
 
+
 s.category
 ----------------
 NY State code for ??
 [need variable definitions]
 
+
 s.type
 ----------------
 NY State code for type of contract
 [need variable definitions}
+
 
 CB1-10
 ----------------
@@ -435,9 +514,10 @@ different responses were provided. These variables indicate the
 community district indicated starting with the first mention (CB1) to
 the tenth mention (CB10). The starting letter indicates the borough
 (M=Manhattan, B=Brooklyn, Q=Queens, S=Staten Island, X=Bronx) and the
-folowing numbers indicate the community district id within that
+following numbers indicate the community district id within that
 borough. Note that a substantial number of contracts listed "ALL" and
 some also indicated none.
+
 
 c.agency
 ----------------
@@ -445,13 +525,14 @@ NY City agency that awarded contract
 [need variable definitions]
 [should we move this column alongside the other c.variables?]
 
+
 type
 ----------------
 Indicator for whether the organization receiving the contract is a
 local or distributive organization. This variable was hand-coded
 during processing.
-			L=local
-			D=distributive
+	L=local
+	D=distributive
 
 
 
