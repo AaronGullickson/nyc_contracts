@@ -440,22 +440,24 @@ members.new
 
 members.id
 ----------------
-[ask Erez]
+A unique identifier for NY City Council members. First digit indicates member’s district. Last digit indicates the order of arrival to the data set. Thus, id=92, represents the second council member to represent District 9.
 
 
 members.district
 ----------------
-[ask Erez]
+The NY City Council district that the council member represents.
 
 
 patronage
 ----------------
-[ask Erez]
+A dummy variable indicating whether a discretionary contract was given by a NY City council member to an organization in his/her own district
+	1 = contract given to an organization in a member’s own district
 
 
 adjacent
 ----------------
-[ask Erez]
+A dummy variable indicating whether a contract was given by an NY City council member to an organization in a district geographically adjacent to the district s/he represents
+	1 = contract given to organization in an adjacent district to member’s district
 
 
 contractno		
