@@ -1,0 +1,33 @@
+Codebook for New York Public Contracts Project (NYPCP) mergedorgs dataset
+
+Reference: Marwell, Nicole P. and Aaron Gullickson.  2016.  New York Public Contracts Project Dataset.
+
+mergedorgs merges data from ?? different sources.  [more]
+
+
+ein
+---------------
+Employer Identification Number, issued by federal government. EINs were not included in the original raw data, but were assigned by matching variable <name> to entries in a digital download of data from the National Center on Charitable Statistics (NCCS).  The NCCS database compiles information from the IRS Form 990, and makes it available for public use.
+
+year
+---------------
+Data in this row corresponds to the information contained on the IRS Form 990 for the indicated year.
+
+ID.org
+---------------
+??
+
+name
+---------------
+[Is this the standardized name from clean.name in the mergedcontracts dataset?]
+
+ID.bmf
+---------------
+??
+
+name.bmf
+---------------
+??
+
+ntee1
+---------------
