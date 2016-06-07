@@ -342,7 +342,7 @@ The listed city of the service from the original raw data.
 state.service
 ---------------		
 The listed state of the service from the original raw
-data. WE HAVE ONE DC ADDRESS HERE **SHOULD WE GET RID OF IT?
+data. 
 
 
 naaccrQualType.service
@@ -435,7 +435,7 @@ and longitude of the service address.
 
 members.new
 ----------------
-[ask Erez]
+Standardized version of NY City Council member name.  Assigned by researchers during processing.
 
 
 members.id
@@ -468,44 +468,46 @@ numbers do NOT uniquely identify contracts.  They contain only a portion of the 
 
 c.transcode
 ----------------
-NY City code for ??
-[need variable definitions]
+Unknown.  From the original raw data.
 
 
 c.typecode
 ----------------		
-NY City code for type of contract
-[need variable definitions]
+NY City code for type of contract.  From the original raw data.  See Appendix 11 of the FY2014 Annual Summary Contracts Report for the City of New York for a full list of codes.
+http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdf
+or see the following url: 
+<http://comptroller.nyc.gov/wp-content/uploads/documents/contract-type-list.pdf>
 
 
 c.awardcode
 ----------------
-NY City code for contract award category
-[need variable definitions]
+NY City code for contract award method category.  From the original raw data.  See Appendix 10 of the FY2014 Annual Summary Contracts Report for the City of New York for a full list of codes.
+http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdf
+or see the following url:
+<http://comptroller.nyc.gov/wp-content/uploads/documents/award-method.pdf>
 
 
 c.category
 ----------------
-NY City code for ??
-[need variable definitions]
+NY City code for contract category.  From the original raw data.  See Appendix 12 of the FY2014 Annual Summary Contracts Report for the City of New York for a full list of codes.
+http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdfs
+or see the following url:
+<http://comptroller.nyc.gov/wp-content/uploads/documents/category-code-list.pdf>
 
 
 s.agency
 ----------------
-NY State agency that awarded contract
-[need variable definitions]
+NY State agency that awarded contract. Text entry. Original raw data.
 
 
 s.category
 ----------------
-NY State code for ??
-[need variable definitions]
+NY State code for contract category.  Meaning of codes unknown. Original raw data.
 
 
 s.type
 ----------------
-NY State code for type of contract
-[need variable definitions}
+NY State code for type of contract.  Text entry.  Original raw data.
 
 
 CB1-10
@@ -523,8 +525,9 @@ some also indicated none.
 
 c.agency
 ----------------
-NY City agency that awarded contract
-[need variable definitions]
+NY City agency that awarded contract.  See Appendix 9 of the the FY2014 Annual Summary Contracts Report for the City of New York for a full list of codes.
+http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdf
+
 [should we move this column alongside the other c.variables?]
 
 
