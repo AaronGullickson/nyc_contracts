@@ -14,8 +14,8 @@ detailed variable descriptions for availability information.
 
 id
 --------------
-A unique id for each contract in the dataset. This was assigned by researchers during
-processing.
+A unique id for each contract in the dataset. This was assigned by
+researchers during processing.
 
 level			
 --------------
@@ -96,7 +96,13 @@ the decimal place identifies the multi-sited organization.
 
 EIN
 ---------------
-Employer Identification Number, issued by federal government. EINs were not included in the original raw data, but were assigned by matching clean.name to entries in the Guidestar.org online database or a digital download of data from the National Center on Charitable Statistics (NCCS).  Both the Guidestar.org database and the NCCS database compile information from the IRS Form 990, and make it available for public use.
+Employer Identification Number, issued by federal government. EINs
+were not included in the original raw data, but were assigned by
+matching clean.name to entries in the Guidestar.org online database or
+a digital download of data from the National Center on Charitable
+Statistics (NCCS).  Both the Guidestar.org database and the NCCS
+database compile information from the IRS Form 990, and make it
+available for public use.
 
 desc
 ---------------
@@ -113,7 +119,14 @@ End date of contract (m/d/y), from the original raw data.
 regdate
 ---------------
 The date (m/d/y) that contract was registered with controller’s
-office. The controller is the chief fiscal officer, and is responsible for issuing contract payments through the NYC and NYS payment systems.  Payments cannot be issued until a contract is registered.  The reliability of this field is in question, as conversations with city and state officials indicate that sometimes the contract registration date is backdated, i.e., a regdate is assigned that is prior to the actual date of contract approval and first payment.  It is unclear why this practice occurs.
+office. The controller is the chief fiscal officer, and is responsible
+for issuing contract payments through the NYC and NYS payment systems.
+Payments cannot be issued until a contract is registered.  The
+reliability of this field is in question, as conversations with city
+and state officials indicate that sometimes the contract registration
+date is backdated, i.e., a regdate is assigned that is prior to the
+actual date of contract approval and first payment.  It is unclear why
+this practice occurs.
 
 fiscal.year		
 ---------------
@@ -161,7 +174,10 @@ service.address
 The address where service was provided, from the original raw
 data. This service address is only available in the second round of
 the competitive bid contract data. Note that in some cases, the
-service address and the address of the organization will be the same.  This is understood to be because the contract recipient has only one location, which is both the organizational address and the service location address.
+service address and the address of the organization will be the same.
+This is understood to be because the contract recipient has only one
+location, which is both the organizational address and the service
+location address.
 
 
 clean.service.address
@@ -290,8 +306,12 @@ and longitude of the organizational address.
 
 
 scode
-_______________
-Text code indicating which one of 25 different service types the contract is for.  Hand coded by researchers based on visual inspection of desc variable.  Document with fuller code descriptions and sample contract descriptions is available as a separate document entitled “S-codes and rules.”
+----------------
+Text code indicating which one of 25 different service types the
+contract is for.  Hand coded by researchers based on visual inspection
+of desc variable.  Document with fuller code descriptions and sample
+contract descriptions is available as a separate document entitled
+“scode_rules.txt”
 	ADV=advocacy
 	CD=community development
 	CR=crime
@@ -435,12 +455,16 @@ and longitude of the service address.
 
 members.new
 ----------------
-Standardized version of NY City Council member name.  Assigned by researchers during processing.
+Standardized version of NY City Council member name.  Assigned by
+researchers during processing.
 
 
 members.id
 ----------------
-A unique identifier for NY City Council members. First digit indicates member’s district. Last digit indicates the order of arrival to the data set. Thus, id=92, represents the second council member to represent District 9.
+A unique identifier for NY City Council members. First digit indicates
+member’s district. Last digit indicates the order of arrival to the
+data set. Thus, id=92, represents the second council member to
+represent District 9.
 
 
 members.district
@@ -450,20 +474,25 @@ The NY City Council district that the council member represents.
 
 patronage
 ----------------
-A dummy variable indicating whether a discretionary contract was given by a NY City council member to an organization in his/her own district
+A dummy variable indicating whether a discretionary contract was given
+by a NY City council member to an organization in his/her own district
 	1 = contract given to an organization in a member’s own district
 
 
 adjacent
 ----------------
-A dummy variable indicating whether a contract was given by an NY City council member to an organization in a district geographically adjacent to the district s/he represents
+A dummy variable indicating whether a contract was given by an NY City
+council member to an organization in a district geographically
+adjacent to the district s/he represents
 	1 = contract given to organization in an adjacent district to member’s district
 
 
 contractno		
 ----------------
 The contract number provided in the original data. These contract
-numbers do NOT uniquely identify contracts.  They contain only a portion of the full contract number, which would be a unique identifier.
+numbers do NOT uniquely identify contracts.  They contain only a
+portion of the full contract number, which would be a unique
+identifier.
 
 
 c.transcode
@@ -473,7 +502,9 @@ Unknown.  From the original raw data.
 
 c.typecode
 ----------------		
-NY City code for type of contract.  From the original raw data.  See Appendix 11 of the FY2014 Annual Summary Contracts Report for the City of New York for a full list of codes.
+NY City code for type of contract.  From the original raw data.  See
+Appendix 11 of the FY2014 Annual Summary Contracts Report for the City
+of New York for a full list of codes.
 http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdf
 or see the following url: 
 <http://comptroller.nyc.gov/wp-content/uploads/documents/contract-type-list.pdf>
@@ -481,7 +512,9 @@ or see the following url:
 
 c.awardcode
 ----------------
-NY City code for contract award method category.  From the original raw data.  See Appendix 10 of the FY2014 Annual Summary Contracts Report for the City of New York for a full list of codes.
+NY City code for contract award method category.  From the original
+raw data.  See Appendix 10 of the FY2014 Annual Summary Contracts
+Report for the City of New York for a full list of codes.
 http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdf
 or see the following url:
 <http://comptroller.nyc.gov/wp-content/uploads/documents/award-method.pdf>
@@ -489,7 +522,9 @@ or see the following url:
 
 c.category
 ----------------
-NY City code for contract category.  From the original raw data.  See Appendix 12 of the FY2014 Annual Summary Contracts Report for the City of New York for a full list of codes.
+NY City code for contract category.  From the original raw data.  See
+Appendix 12 of the FY2014 Annual Summary Contracts Report for the City
+of New York for a full list of codes.
 http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdfs
 or see the following url:
 <http://comptroller.nyc.gov/wp-content/uploads/documents/category-code-list.pdf>
@@ -525,7 +560,9 @@ some also indicated none.
 
 c.agency
 ----------------
-NY City agency that awarded contract.  See Appendix 9 of the the FY2014 Annual Summary Contracts Report for the City of New York for a full list of codes.
+NY City agency that awarded contract.  See Appendix 9 of the the
+FY2014 Annual Summary Contracts Report for the City of New York for a
+full list of codes.
 http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdf
 
 [should we move this column alongside the other c.variables?]
@@ -538,9 +575,3 @@ local or distributive organization. This variable was hand-coded
 during processing.
 	L=local
 	D=distributive
-
-
-
-
-
-
