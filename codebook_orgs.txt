@@ -9,7 +9,7 @@ the Internal Revenue Service, as managed by the National Center for
 Charitable Statistics.  The BMF data cover the years 1997-2012, and
 were provided by Professor Thad Calabrese of New York University.  The
 researchers eliminated all BMF data corresponding to organizations not
-included in the mergedcontracts file, and [something on how you
+included in the mergedcontracts database, and [something on how you
 constructed the file with data for each year 1997-2012].  Not all
 variables are available for all entries in the dataset.
 
@@ -27,13 +27,13 @@ for the indicated year.
 
 ID.org
 ---------------
-The ID of the organization as it appears in the contract
+The ID of the organization as it appears in the mergedcontracts
 database. ID.org can be used to merge the two datasets. 
 
 name
 ---------------
 The name of the organization based on the first listed clean.name from
-the contract dataset. 
+the mergedcontracts dataset. 
 
 ID.bmf
 ---------------
@@ -137,7 +137,7 @@ assets
 Total assets (end of year) from most recently filed Form 990.  If an
 organization did not file in a particular year, the income figure will
 be drawn from the most recently filed year.  This may lead to
-duplicate figures across multiple years.
+duplicate figures across multiple years.  From the BMF.
 
 ctotrev
 ---------------
@@ -150,17 +150,17 @@ multiple years.
 ruledate
 ---------------
 Ruling date: year and month of IRS ruling or determination letter
-recognizing organization’s tax exempt status (YYYYMM)
+recognizing organization’s tax exempt status (YYYYMM).  From the BMF.
 
 level3
 ---------------
-Major NTEE category.
+Major NTEE category.  From the BMF.
 
 level4
 ---------------
-NTEE-CC Major Group.
+NTEE-CC Major Group.  From the BMF.
 
 nyc
 ---------------
-(I believe this is a TRUE/FALSE based on whether the listed ZIP code
-was in NYC -- Aaron)
+TRUE/FALSE based on whether the listed ZIP code
+is in New York City.  Added by researchers during processing.
