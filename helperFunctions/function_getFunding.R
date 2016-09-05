@@ -26,6 +26,8 @@
 #           contract service address rather than the org address.
 # long - If true, the output will be sorted like a "long" panel dataset with each
 #        year/geographic unit on a separate row. 
+# includScode - if TRUE, then separate amounts will be calculated for each scode in 
+#               addition to the total amount
 # contracts - The user can specify a contract dataset that might already have some 
 #             data restrictions placed on it. If nothing is entered here, the program
 #             will attempt to load mergedcontracts.csv from the current directory. 
@@ -37,7 +39,8 @@
 # annualized.
 
 getFunding <- function(geo, start, end, width, level="B",
-                       service=FALSE, long=FALSE, contracts=NULL) {
+                       service=FALSE, long=FALSE, includeScode=FALSE,
+                       contracts=NULL) {
   
   if(((end-start+1)%%width)>0) {
     cat("The given width does not cover the range from start to end equally.")
@@ -68,6 +71,11 @@ getFunding <- function(geo, start, end, width, level="B",
     return()
   }
 
+  #convert NA's in s-codes to "UND" so they don't drop out of the total across all s-codes
+  contracts$scode <- as.character(contracts$scode)
+  contracts$scode[is.na(contracts$scode)] <- "UND"
+  contracts$scode <- as.factor(contracts$scode)
+  
   #caclulate the total amount per day
   contracts$amountday <- contracts$origamt/contracts$contractdays
   
@@ -105,31 +113,56 @@ getFunding <- function(geo, start, end, width, level="B",
     amounts <- cbind(amounts, days*contracts$amountday)
   }
   
-  amounts <- cbind(contracts[,geo],amounts)
-  colnames(amounts) <- c(geo, paste("y",years, sep=""))
+  amounts <- as.data.frame(amounts)
+  amounts <- cbind(contracts[,geo], contracts$scode,amounts)
+  #colnames(amounts) <- c(geo, "scode", paste("y",years, sep=""))
 
   #now sum up by geographic identifier
   final <- NULL
   for(i in 1:length(years)) {
-    temp <- tapply(amounts[,i+1], as.factor(amounts[,1]), sum)
+    temp <- tapply(amounts[,i+2], amounts[,1:2], sum)
+    ##missing values should be zeros
+    temp[is.na(temp)] <- 0
+    temp <- cbind(apply(temp,1,sum),temp)
+    #colnames(temp) <- paste("amount",colnames(temp), sep="")
     if(long) {
       temp <- cbind(as.numeric(rownames(temp)), years[i], temp)
-      final <- rbind(final, temp)
+      if(!includeScode) {
+        final <- rbind(final, temp[,1:3])
+      } else {
+        final <- rbind(final, temp)
+      }
     } else {
       if(is.null(final)) {
         final <- cbind(final, as.numeric(rownames(temp)))
       }
-      final <- cbind(final, temp)
+      #colnames(temp) <- paste(colnames(temp), years[i], sep="")
+      if(!includeScode) {
+        final <- cbind(final, temp[,1])
+      } else {
+        final <- cbind(final, temp)
+      }
     }
   }
   
+  #names are a pain with all the different possibilities
   if(long) {
-    colnames(final) <- c(geo, "year", "amount")
+    if(includeScode) {
+      colnames(final) <- c(geo, "year", paste("amount",  c("", paste("",sort(unique(contracts$scode)), sep=".")), sep=""))
+    } else {
+      colnames(final) <- c(geo, "year", "amount")
+    }
   } else {
-    colnames(final) <- c(geo, paste("y",years,sep=""))
+    if(includeScode) {
+      colnames(final) <- c(geo, paste(rep(paste("amount", years, sep=""),each=length(unique(contracts$scode))+1), 
+                                      c("", paste("",sort(unique(contracts$scode)), sep=".")), sep=""))
+    } else {
+      colnames(final) <- c(geo, paste("amount", years, sep=""))
+      
+    }
   }
   rownames(final) <- NULL
   
-  return(final)
+  return(data.frame(final))
   
 }
