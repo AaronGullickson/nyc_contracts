@@ -1,45 +1,53 @@
+#S-code documentation
 Marwell/Gullickson contract data project
+
 S-codes: as of 9/1/2010
 
-ADV ? advocacy 
-Advocacy; all contracts with the term legal, unless there is reference to crime; mediation services unless there is specific reference to other categories
+## ADV (Advocacy)
+all contracts with the term legal, unless there is reference to crime; mediation services unless there is specific reference to other categories
 Contracts coming from agency code 5005 (Court Admin Office)
+
 Sample contract descriptions:
+
 * civil legal service provider 
 * free legal service to families, the poor 
 * legal representation 
 * administration of justice provider 
 * GRANT AWARD TO ADMINISTRATION OF JUSTICE PROVIDER 
 
-CD ? community development 
-Example contract descriptions:
-* community development? 
-o community reinvestment 
-o economic investment for community 
-o enhance quality of life for community 
-o neighborhood preservation program (NPP) 
-o neighborhood redevelopment 
-* business revitalization 
-o assist/encourage local business 
-o cleanup business district 
-o local business guide 
-o print shopping guide 
-o comprehensive plan for the local canal 
-o enterprenewal assistance program (EAP) 
-o economic development zone program 
-o maintain economic vitality 
-o promote tourism 
-o promote the commercial strip 
-* technical assistance for small businesses 
-o technical assistance 
-o recycling investment program marketing assistance 
-o sponsor workshops to provide technical assistance 
+##CD (community development) 
 
-CR ? crime 
+Example contract descriptions:
+
+* community development? 
+* community reinvestment 
+* economic investment for community 
+* enhance quality of life for community 
+* neighborhood preservation program (NPP) 
+* neighborhood redevelopment 
+* business revitalization 
+* assist/encourage local business 
+* cleanup business district 
+* local business guide 
+* print shopping guide 
+* comprehensive plan for the local canal 
+* enterprenewal assistance program (EAP) 
+* economic development zone program 
+* maintain economic vitality 
+* promote tourism 
+* promote the commercial strip 
+* technical assistance for small businesses 
+* technical assistance 
+* recycling investment program marketing assistance 
+* sponsor workshops to provide technical assistance 
+
+## CR (Crime)
 contracts dealing with criminals; all contracts related to a defendant or the reintroduction of defendant to the community; assistance to crime victims. 
 NOT juvenile offenders; ONLY adult offenders
 NOT domestic violence (those are FSP)
+
 Example contract descriptions:
+
 * civilian observation patrol 
 * crime preservation 
 * delinquency program 
@@ -50,14 +58,19 @@ Example contract descriptions:
 * TO REDUCE THE INCIDENTS OF CRIME AGAINST CHILDREN 
 * MINORITY HEALTH-VIOLENCE REDUCTION AND PREVENTION PROGRAMS 
 
-CULTO ? cultural 
+## CULTO (Cultural)
 environmental, cultural, recreational contracts. Any cultural contracts (museum, music, dance), recreational (non-youth camps, fireworks). 
 NOT educational 
+
 * if adult education use EDUC 
 * if relating to youth use YOUTH 
+
 NOT contracts that fit into youth: anything pertaining to youth use YOUTH
+
 NOT graffiti removal: use CD 
+
 Sample contract descriptions:
+
 * environmental education
 * Holocaust education
 * clean water/clean air bond 
@@ -72,10 +85,11 @@ Sample contract descriptions:
 * VISITOR OUTREACH FOR THE GARDEN or other programs run by parks 
 * PROVIDE INSTRUCTION ON ANTIVIOLENCE BEHAVIOR when target population could not be figured out (if it is kids or adults) 
 
-DC ? day care 
+##DC (day care) 
 care of kindergarten-level children and younger, contracts targeting preschoolers
 
 Sample contract descriptions: 
+
 * head-start 
 * universal kindergarten program 
 * academic training for preschoolers 
@@ -84,7 +98,7 @@ Sample contract descriptions:
 * pre-school project 
 * DAY CARE HLTH & SAFETY 
 
-DIS ? disabilities 
+##DIS (disabilities)
 contracts relating to people with disabilities, mentally retarded, developmentally disabled.
 All contracts coming from coming from agency code 51000 (Office of Mental Retardation and Developmental Disabilities) 
 Sample contract descriptions:
@@ -108,11 +122,15 @@ Sample contract descriptions:
 * HOME&COMM BASED WAIVER STARTUP & REPYT 
 * VOICF START UP NYC RO 
 
-EDUC ? education & training
+##EDUC (education & training)
 adult education; college or university education; all contracts related to college testing or college preparation (e.g. Project STAR); all programs run by colleges or universities (unless health); professional education, training 
+
 NOT staff training: use GOS 
+
 NOT welfare to work training: use EMPL or EMPO 
+
 Sample contract descriptions:
+
 * HIGHER EDUCATION OPPORTUNITY PROGRAM 
 * Project STAR (college prep. program) 
 * COLLEGE COUNSELING PROGRAM 
@@ -128,10 +146,13 @@ Sample contract descriptions:
 * EPIDEMIOLOGY TRAINING 
 * PRIMARY CARE RESIDENCY TRAINING. 
 
-ELD ? elderly 
+##ELD (elderly)
 any contracts relating to the elderly; all contracts from State Office for the Aging (1370) 
+
 NOT housing: use HOUS
+
 Sample contract descriptions:
+
 * Chapter 620/Section 5310/Section 16(B)(2) ? transportation supplemental services, to provide transportation
 * FUND SENIOR CITIZEN SERVICES 
 * MEALS ON WHEELS 
@@ -149,9 +170,11 @@ Sample contract descriptions:
 * TO PROVIDE NUTRITION TO THE ELDERLY?UNDER GRANTS-IN-AID 
 * TO PROVIDE RECREATION TO THE ELDERLY UNDER GRANTS-IN-AID. 
 
-EMPM ? mental health, employment for mentally ill people 
+##EMPM (mental health, employment for mentally ill people)
 contracts targeting increased employment of mentally ill people
+
 Sample contract descriptions:
+
 * enclaves 
 * supported employment / SUPPORTED WORK 
 * LONG TERM SHELTERED EMPLOYMENT 
@@ -167,10 +190,14 @@ Sample contract descriptions:
 * SPECIAL EMPLOYMENT 
 * TO PROVIDE COMPREHENSIVE SUPPORTED EMPLOYMENT SER VICES TO INDIVIDUAL WITH SEVERE DISABILITES 
 * TO PURCHASE VOCATIONAL REHABILITATION SERVICES FORELIGIBLE INDIVIDUALS 
-EMPL ? literacy, pre-employment skill training 
+
+##EMPL (literacy, pre-employment skill training) 
 contracts enhancing individual skills to increase their chances of obtaining employment; Literacy/English as second language programs
+
 NOT mentally ill
+
 Sample contract descriptions:
+
 * Built on Pride 
 * JOB TRAINING PARTNERSHIP ACT 
 * GED TRAINING 
@@ -179,11 +206,13 @@ Sample contract descriptions:
 * PROMOTE/DEVELOP LITERACY 
 * PROVIDE TENANTS WITH LITERACY TRAINING
 
-EMPO ? employment other 
+##EMPO (employment other)
 all other employment-related contracts; school-to-work transition programs
+
 NOT youth employment programs: use YOUTH for, e.g., all YEETP
 
 Sample contract descriptions:
+
 * WAGE SUBSIDY 
 * WELFARE TO WORK 
 * TANF (welfare): moving people to work
@@ -195,11 +224,14 @@ Sample contract descriptions:
 * EMPLOYMENT AND RELATED SERVICES. 
 * VOCATIONAL SERVICES INITIATIVE
 
-FAMILY SERVICES
-FSF ? foster care
-FSP ? family preventive services 
+##FAMILY SERVICES
+
+###FSF (foster care)
+###FSP (family preventive services)
 family support services, family well-being, family-related preventing services
+
 Sample contract descriptions:
+
 * domestic violence prevention 
 * family support services; CHILDREN & FAMILIES FAMILY SUPPORT SERVICES ONLY if not from Office of Mental Retardation and Developmental Disabilities 
 * reproductive health
@@ -218,9 +250,11 @@ Sample contract descriptions:
 * HOME VISITING-TANF 
 * APPS TANF W/O REGUARDS ONGOING 
 
-GEN ? general, multi-service 
+##GEN (general, multi-service)
 general community activities; activities/contracts encompassing more than one categories 
+
 NOT contracts referring to more than one service in same category 
+
 * settlement houses / STATEWIDE SETTLEMENT HOUSE PROGRAM 
 * Mixed: BUILDING MAINTENANCE AND VETERAN'S RECREATION 
 * Mixed: MANAGEMENT/TUTORIAL ASSISTANCE PROJECT. 
@@ -258,10 +292,12 @@ general operating costs, non-professional staff/personnel costs, enhance profess
 * PROVIDE SUPERVISION,TRAINING & TECHNICAL SUPPORT? TO OUR PROGRAM OPERATORS & STAFF 
 * TO PROVIDE ADMINISTRATION?UNDER GRANTS-IN-AID. 
 
-HEALTH 
+##HEALTH 
 if more than one health sub-category, ascertain primary target 
 if both health & employment, ascertain primary target 
-HLA ? AIDS 
+
+HLA (AIDS) 
+
 * EPIDEMIOLOGY/AIDS EDUCATION AND TRAINING 
 * ACQUIRED IMMUNE DEFICIENCY SYNDROME 
 * AIDS/BENEFIT HIV AIDS CLIENTS 
@@ -308,9 +344,12 @@ HLO ? health other
 * TO PROVIDE VARIOUS SOCIAL SERVICES TO VETERANS IN NEED. 
 * VETERANS ASSISTANCE PROGRAM. 
 
-HOUS ? housing 
+##HOUS (housing)
+
 any housing services, even if targeting specific populations like youth or AIDS patients (AIDS HOUSING ? code as HOUS) 
+
 NOT contracts that include other non-housing services (e.g. counseling), these should go elsewhere 
+
 * HOMELESSNESS PREVENTION PROGRAM 
 * COMMUNITY RESIDENCE even if from Office of Mental Health 
 * DOE HEAP WEATHERIZATION 
@@ -320,12 +359,15 @@ NOT contracts that include other non-housing services (e.g. counseling), these s
 * HOMELESS REHOUSING ASSISTANCE PROGRAM (HRAP) 
 * HOMELESS/MICA 
 * TENANT ASSISTANCE 
-IMM ? immigration 
+
+##IMM (immigration) 
 immigrant services 
+
 NOT targeting youth, e.g. bilingual programs for youth immigrants: use YOUTH
+
 NOT housing: use HOUS
 
-MI ? member items 
+##MI (member items )
 MI 
 MI?[any kind of contract description] 
 [Any kind of contract description]--MI 
@@ -335,24 +377,30 @@ Legislative Grant/Assembly Member (or truncated version, e.g., ?Assembly?)
 OCM-Legislative Grant 
 Legislative Add On 
 
-NRENT ? support to NPOs for rent & physical plant 
+##NRENT (support to NPOs for rent & physical plant)
 renting, leasing or physical improvement of space occupied by NPOs
 Contracts coming from agency code 15900 (Dormitory Authority),  esp. if Master Agreement
+
 * ENVIRONMENTAL MODIFICATION contracts coming from Office of Mental Retardation and Developmental Disabilities (51000). We assumed that these agencies are running programs for the disabled and needed to make changes to their physical plant to meet governmental regulations. 
 * maintenance contracts: MINOR MAINTENANCE CONTRACT / GENERAL MAINTENANCE / MAINTENANCE . But MAINTENANCE OUTPATIENT to HLS 
 * CAPITAL IMPROVEMENT FUND / CAPITAL CONSTRUCTION PROJECT- MINOR MAINTENANCE 
 * VOICF - Voluntary Operated Intermediate Care Facilities; VOICF MAINTENANCE: NRENT. But VOICF START UP NYC RO should be coded as DIS. 
 * Foster care fire & safety 
 
-UND ? undecided 
+##UND (undecided)
 contracts that do not fit into any of the categories or we were unable to identify 
 
-YOUTH ? children & youth
+##YOUTH (children & youth)
 any contracts relating to children or youth 
+
 any contracts relating to schools (high school or less) 
+
 NOT housing-related: use HOUS 
+
 NOT college students or college/university-related: use EDUC 
+
 NOT adult education: use EDUC 
+
 * ALL tutorial/tutoring programs 
 * ALL summer programs/ SUMMER RECREATIONAL PROGRAMS 
 * youth education 
@@ -387,7 +435,7 @@ NOT adult education: use EDUC
 * LAO/JOBS FOR YOUTH 
 
 
-Other service area coding decision rules 
+##Other service area coding decision rules 
 * FUND TRAINING PROGRAM / COMPUTER TRAINING PROGRAMS: when I could not see what population these programs serve, based on other programs/contracts I ascertained if the organization tends to serve adults or children and I put the contract either under EDUC for adult education or YOUTH for children/youth education. 
 * Contracts like PROGRAM FUNDING, PROGRAM DEVELOPMENT GRANT, FUND PROGRAMS, SUPPORT ORGANIZATIONS PROGRAMS, i.e. contracts where program?s nature is not specified my decision strategy was the following: 1) Ascertain organization?s primary focus or profile either from guidestar or other web resources, and assign contract accordingly;? 2) if step 1 is not possible, code it as GEN (general/multi-service) if organization has services/programs that fall into multiple categories; 3) or code it based on the nature of the originating agency 4) if that does not help too much either, code it as GEN (e.g. Dept of Education program funding to CHURCH OF GOD OF PROPHECY) 
 * TANF: It stands for Temporary Assistance for Needy Families. It is the replacement for AFDC (Families with Dependent Children. It is cash welfare. 1) FSP if prevention, ?making sure that the strains of living of welfare don?t translate into child abuse, child care e.g. TANF PREVENTION PROGRAM,? PRV / TANF; 2) EMPL/EMPO - if welfare, job placement-related: moving people to work, welfare-to-work programs e.g. JOB PLACEMENT & JOB RETENTION SERVICES FOR TANF RECIPIENTS 

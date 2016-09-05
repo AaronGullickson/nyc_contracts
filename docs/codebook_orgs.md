@@ -1,4 +1,4 @@
-Codebook for New York Public Contracts Project (NYPCP) mergedorgs dataset
+# Codebook for New York Public Contracts Project (NYPCP) mergedorgs dataset
 
 Reference: Marwell, Nicole P. and Aaron Gullickson.  2016.  New York Public Contracts Project Dataset.
 
@@ -14,153 +14,135 @@ constructed the file with data for each year 1997-2012].  Not all
 variables are available for all entries in the dataset.
 
 
-ein
----------------
+## ein
 Employer Identification Number, issued by federal government. EINs
 were not included in the original raw data, but were assigned by
-matching mergedorgs variable <name> to entries in the BMF data.
+matching mergedorgs variable `name` to entries in the BMF data.
 
-year
----------------
+## year
 Data in this row corresponds to the information contained in the BMF
 for the indicated year.
 
-ID.org
----------------
+## ID.org
 The ID of the organization as it appears in the mergedcontracts
 database. ID.org can be used to merge the two datasets. 
 
-name
----------------
+## name
 The name of the organization based on the first listed clean.name from
 the mergedcontracts dataset. 
 
-ID.bmf
----------------
+## ID.bmf
 Unique ID in the BMF data. 
 
-name.bmf
----------------
+## name.bmf
 Name listed in the BMF data. 
 
-ntee1
----------------
+## ntee1
 The NTEE (National Taxonomy of Exempt Entities) major group code. From
 the BMF. Values are single letter codes A-Z.  Meanings of these codes
 can be found on the NCCS website.  See the following url:
 http://nccsweb.urban.org/PubApps/nteeSearch.php?gQry=allMajor&codeType=NTEE
 
-nteecc
----------------
+## nteecc
 The NTEE-Core Code.  From the BMF.  Meanings of these codes can be
 found on the NCCS website.  See the following url:
 http://nccs.urban.org/classification/ntee.cfm
 
-city
----------------
+## city
 The city in which the organization is located.  From the BMF.
-
-fips
----------------
+ 
+## fips
 2-digit State + 3-digit County FIPS code (Federal Information
 Processing Standard).  From the BMF.
 
-ntmaj5
----------------
+## ntmaj5
 The NTEE classification system contains several sets of categories.
 This code divides all public charities [IRS exempt category 501(c)3]
 into one of 5 major sub-sectors.  From the BMF.
-	AR=arts and culture
-	ED=education
-	HE=health
-	HU=human services
-	OT=other
-	NA=no entry
+	
+- AR=arts and culture
+- ED=education
+- HE=health
+- HU=human services
+- OT=other
+- NA=no entry
 	
 
-ntmaj10
----------------
+## ntmaj10
 The NTEE classification system contains several sets of categories.
 This code divides all public charities [IRS exempt category 501(c)3]
 into one of 10 major sub-sectors.  From the BMF.
-	AR=arts and culture
-	ED=education
-	EN=environment and animals
-	HE=health
-	HU=human services
-	IN=international and foreign affairs
-	PU=public and societal benefit
-	RE=religion related
-	MU=mutual association or membership benefit
-	UN=unknown or unclassified
-	NA=no entry
+	
+- AR=arts and culture
+- ED=education
+- EN=environment and animals
+- HE=health
+- HU=human services
+- IN=international and foreign affairs
+- PU=public and societal benefit
+- RE=religion related
+- MU=mutual association or membership benefit
+- UN=unknown or unclassified
+- NA=no entry
 	
 
-ntmaj12
----------------
+## ntmaj12
 The NTEE classification system contains several sets of categories.
 This code divides all public charities [IRS exempt category 501(c)3]
 into one of 12 major sub-sectors.  The distinction from ntmaj10 is
 that ntmaj12 separates higher education from the education category,
 and hospitals from the health category.  From the BMF.
-	AR=arts and culture
-	BH=higher education
-	ED=education
-	EN=environment and animals
-	EH=hospitals
-	HE=health
-	HU=human services
-	IN=international and foreign affairs
-	PU=public and societal benefit
-	RE=religion related
-	MU=mutual association or membership benefit
-	UN=unknown or unclassified
-	NA=no entry
+	
+- AR=arts and culture
+- BH=higher education
+- ED=education
+- EN=environment and animals
+- EH=hospitals
+- HE=health
+- HU=human services
+- IN=international and foreign affairs
+- PU=public and societal benefit
+- RE=religion related
+- MU=mutual association or membership benefit
+- UN=unknown or unclassified
+- NA=no entry
 
 
 
-majgrpb
----------------
-Appears to be the same as variable <ntee1>.
+## majgrpb
+Appears to be the same as variable `ntee1`.
 
 
-income
----------------
+## income
 Gross receipts from the most recently filed Form 990.  If an
 organization did not file in a particular year, the income figure will
 be drawn from the most recently filed year.  This may lead to
 duplicate figures across multiple years. From the BMF.
 
 
-assets
----------------
+## assets
 Total assets (end of year) from most recently filed Form 990.  If an
 organization did not file in a particular year, the income figure will
 be drawn from the most recently filed year.  This may lead to
 duplicate figures across multiple years.  From the BMF.
 
-ctotrev
----------------
+## ctotrev
 Total Revenue from most recently filed Form 990 (Part I, line 12 on
 Form 990; Part I, line 9 on Form 990-EZ).  If an organization did not
 file in a particular year, the income figure will be drawn from the
 most recently filed year.  This may lead to duplicate figures across
 multiple years.
 
-ruledate
----------------
+## ruledate
 Ruling date: year and month of IRS ruling or determination letter
 recognizing organization’s tax exempt status (YYYYMM).  From the BMF.
 
-level3
----------------
+## level3
 Major NTEE category.  From the BMF.
 
-level4
----------------
+## level4
 NTEE-CC Major Group.  From the BMF.
 
-nyc
----------------
+## nyc
 TRUE/FALSE based on whether the listed ZIP code
 is in New York City.  Added by researchers during processing.
