@@ -24,12 +24,11 @@ Indicator variable for whether the contract is from NY State or NY City
 
 ## secondRound 
 True/false variable indicating whether the data come from the
-second round of data collection on competitive contracts (2002-2012).
+second round of data collection on competitive contracts (2002-2012) as opposed to the first round of data collection (1997-2001).  The researchers consider the 1997-2001 data less reliable than the 2002-2012 data.
  		
 ## competitive
-Boolean variable indicating whether the contract is from
-competitive-bid dataset. Note that there are some contracts identified
-in both the discretionary and competitive datasets.
+Boolean variable indicating whether the contract is from the
+competitive-bid dataset, as opposed to the discretionary funding dataset. The competitive-bid dataset was collected from the comptroller’s office (NY City and NY state) while the discretionary dataset was collected separately from the NY City Council office.  Note that there are some contracts identified in both the discretionary and competitive datasets.
 
 ## discretionary		
 Boolean variable indicating whether contract is from discretionary
@@ -102,7 +101,7 @@ Start date of contract (m/d/y), from the original raw data.
 End date of contract (m/d/y), from the original raw data.
 
 ## regdate
-The date (m/d/y) that contract was registered with controller‚Äôs
+The date (m/d/y) that contract was registered with controller’s
 office. The controller is the chief fiscal officer, and is responsible
 for issuing contract payments through the NYC and NYS payment systems.
 Payments cannot be issued until a contract is registered.  The
@@ -135,7 +134,7 @@ The amount of the contract expended as of date of data pull, in
 unadjusted dollars, from the original raw data
 
 ## encamt			
-The amount of the contract encumbered as of data of data pull, in
+The amount of the contract encumbered as of date of data pull, in
 unadjusted dollars, from the original raw data.
 
 ## amtyr			
@@ -297,12 +296,11 @@ because of corrections applied in the geocoding procedure.
 
 
 ## city.service
-The listed city of the service from the original raw data. 
+The listed city of the service address from the original raw data. 
 
 
 ## state.service
-The listed state of the service from the original raw
-data. 
+The listed state of the service address from the original raw data. 
 
 
 ## naaccrQualType.service
@@ -387,7 +385,7 @@ researchers during processing.
 
 ## members.id
 A unique identifier for NY City Council members. First digit indicates
-member‚Äôs district. Last digit indicates the order of arrival to the
+Member’s district. Last digit indicates the order of arrival to the
 data set. Thus, id=92, represents the second council member to
 represent District 9.
 
@@ -399,14 +397,14 @@ The NY City Council district that the council member represents.
 ## patronage
 A dummy variable indicating whether a discretionary contract was given
 by a NY City council member to an organization in his/her own district
-	1 = contract given to an organization in a member‚Äôs own district
+	1 = contract given to an organization in a member’s own district
 
 
 ## adjacent
 A dummy variable indicating whether a contract was given by an NY City
 council member to an organization in a district geographically
 adjacent to the district s/he represents
-	1 = contract given to organization in an adjacent district to member‚Äôs district
+	1 = contract given to organization in an adjacent district to member’s district
 
 
 ## contractno		
@@ -472,7 +470,7 @@ some also indicated none.
 
 
 ## c.agency
-NY City agency that awarded contract.  See Appendix 9 of the the
+NY City agency that awarded contract.  See Appendix 9 of the 
 FY2014 Annual Summary Contracts Report for the City of New York for a
 full list of codes.
 http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdf
@@ -483,7 +481,8 @@ http://comptroller.nyc.gov/wp-content/uploads/documents/Annual_Report.pdf
 ## type
 Indicator for whether the organization receiving the contract is a
 local or distributive organization. This variable was hand-coded
-during processing.
+during processing.  See Marwell & Gullickson 2013 paper in Social Service Review for definition of L and D.
 
 - L=local
 - D=distributive
+
