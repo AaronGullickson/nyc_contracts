@@ -1,5 +1,12 @@
 #New York City Contract Data
 
+## Contributors
+
+- [Nicole Marwell](mailto:nmarwell@chicago.edu), University of Chicago
+- [Aaron Gullickson](mailto:aarong@uoregon.edu), University of Oregon
+- [Delia Baldassari](mailto:delia.b@nyu.edu), New York University
+- [Erez Marantz](mailto:erezinyo@gmail.com), New York University
+
 ## Background
 
 These data contain information on active contracts to nonprofit organizations located in New York City between the years 1997 to 2011. This data is available as a csv file named `mergedcontracts.csv`. In addition to the contract data, we also provide an organizational dataset named `mergedorgs.csv` that lists information about every organization that received at least one contract over this time period. 
