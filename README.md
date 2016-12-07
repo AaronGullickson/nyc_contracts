@@ -1,14 +1,21 @@
 # New York City Contract Data
  
+## Contributors
+
+- [Nicole Marwell](mailto:nmarwell@uchicago.edu), University of Chicago
+- [Aaron Gullickson](mailto:aarong@uoregon.edu), University of Oregon
+- Delia Baldassari, New York University
+- Erez Marantz, New York University
+ 
 ## Background
  
-These data contain information on active contracts to nonprofit organizations located in New York City between the years 1997 to 2011. This data is available as a csv file named `mergedcontracts.csv`. In addition to the contract data, we also provide an organizational dataset named `mergedorgs.csv` that lists information about every organization that received at least one contract over this time period. 
+These data contain information on active contracts to nonprofit organizations located in New York City between the years 1997 and 2011. This data is available as a csv file named `mergedcontracts.csv`. In addition to the contract data, we also provide an organizational dataset named `mergedorgs.csv` that lists information about every organization that received at least one contract over this time period. 
 
 The data were requested and processed in three different rounds using somewhat different techniques and sources and researchers should be aware of these differences before analyzing the data. Researchers should be careful about combining all three sources into a single analysis. 
 
 ### Contract Data
 
-In the first round, data were requested from both the city and state comptrollers under freedom of information laws for the years 1997 to 2001. These data include all competitively-bid contracts to nonprofit organizations with a New York City address by both the city and state governments of New York. This data was cleaned and processed manually by Marwell, Gullickson, and several research assistants. Because the same organization could be listed in different ways under the name of organization (e.g. abbreviations, acronyms, or full names), a major component of this processing was to identify the unique organizations that corresponded to each contract and provide a unique id to link the contract dataset with the organizational dataset. Codes were also developed manually for the service provided by the contract and for whether the organization was a local or distributive organization in terms of using its resources. The listed addresses of all organizations were also cleaned and geo-coded. 
+In the first round, data were requested from both the city and state comptrollers under freedom of information laws for the years 1997 to 2001. These data include all competitively-bid contracts to nonprofit organizations with a New York City address by both the city and state governments of New York that were active between the years of 1997 and 2001, even if they were originally awarded before 1997. This data was cleaned and processed manually by Marwell, Gullickson, and several research assistants. Because the same organization could be listed in different ways under the name of organization (e.g. abbreviations, acronyms, or full names), a major component of this processing was to identify the unique organizations that corresponded to each contract and provide a unique id to link the contract dataset with the organizational dataset. Codes were also developed manually for the service provided by the contract and for whether the organization was a local or distributive organization in terms of using its resources. The listed addresses of all organizations were also cleaned and geo-coded. 
 
 In the second round, similar data were requested from both the city and state comptroller for the years 2002-2011. The process of finding unique organizations and linking contracts to the same organizations in both this stage and the previous stage was done computationally using the `RecordLinkage` library in R to find similar names and addresses. This initial technique was then checked by hand for mistakes. Because the procedures used by the city and state had changed significantly between requests, the available variables for the second round of data do not exactly match the variables in the first round. In particular, the second round of data for the city also included an address for where services were being provided. This address was geocoded along with the organizational address. 
 
@@ -27,6 +34,8 @@ Organizational information comes from the Business Master File (BMF) of the Inte
 Documentation for all of the variables in both datasets is available in the `docs` directory. This directory also contains documentation about how decisions were made to code contracts into service areas. 
 
 An additional directory called `helperFunctions` provides R code for functions that researchers might find helpful for extracting information from the datasets. 
+
+In the future, we plan to release the code that we used to process the second and third round of data, including R scripts for de-duping and matching records and perl scripts for cleaning organizational names and addresses. 
 
 ## Editing the data
 
