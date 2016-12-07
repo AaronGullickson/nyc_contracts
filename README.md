@@ -1,10 +1,10 @@
-# New York City Contract Data
+# New York City Non-Profit Contract Data
  
 ## Contributors
 
 - [Nicole Marwell](mailto:nmarwell@uchicago.edu), University of Chicago
 - [Aaron Gullickson](mailto:aarong@uoregon.edu), University of Oregon
-- Delia Baldassari, New York University
+- Delia Baldassarri, New York University
 - Erez Marantz, New York University
  
 ## Background
